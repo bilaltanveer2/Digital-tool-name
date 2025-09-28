@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Analysis Report: 13 Vibrant Marketing & Business Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 1.5rem 3rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInDown 1s ease;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ff416c;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .download-btn {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .download-btn:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 6px 20px rgba(255, 65, 108, 0.5);
+        }
+        nav {
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            padding: 1.2rem 3rem;
+            position: sticky;
+            top: 85px;
+            z-index: 99;
+            overflow-x: auto;
+            white-space: nowrap;
+            animation: fadeInUp 1s ease;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: 500;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        nav a:hover, nav a.active {
+            background: #ff416c;
+            color: white;
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+        }
+        main {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 3rem;
+        }
+        .section {
+            background: linear-gradient(135deg, #ffffff 0%, #fff1eb 100%);
+            margin-bottom: 3rem;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+            animation: popIn 0.8s ease forwards;
+        }
+        .section:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+        .section:nth-child(even) {
+            animation-delay: 0.3s;
+        }
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .section:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: #ff4b2b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            animation: colorPulse 2s infinite;
+        }
+        @keyframes colorPulse {
+            0% { color: #ff4b2b; }
+            50% { color: #ff416c; }
+            100% { color: #ff4b2b; }
+        }
+        .section .url {
+            color: #3498db;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            word-break: break-all;
+            transition: color 0.4s ease, transform 0.4s ease;
+        }
+        .section .url:hover {
+            color: #ff416c;
+            transform: scale(1.05);
+        }
+        .details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .detail-item {
+            background: linear-gradient(135deg, #fefefe 0%, #f6d365 100%);
+            padding: 1.8rem;
+            border-radius: 15px;
+            border-left: 6px solid #ff416c;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInLeft 0.6s ease forwards;
+        }
+        .detail-item:nth-child(2) { animation-delay: 0.2s; }
+        .detail-item:nth-child(3) { animation-delay: 0.4s; }
+        .detail-item:nth-child(4) { animation-delay: 0.6s; }
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .detail-item:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 10px 25px rgba(255, 65, 108, 0.3);
+        }
+        .detail-item h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 600;
+        }
+        .detail-item p {
+            color: #34495e;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            animation: fadeInUp 1s ease;
+        }
+        footer .download-btn {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.2rem;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav {
+                padding: 1rem;
+            }
+            nav ul {
+                gap: 1rem;
+            }
+            main {
+                padding: 0 1.5rem;
+                margin: 2rem auto;
+            }
+            .section {
+                padding: 2rem;
+            }
+            .details {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+            }
+            header, nav, footer {
+                position: static;
+                box-shadow: none;
+                background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .download-btn {
+                display: none;
+            }
+            .section {
+                box-shadow: none;
+                margin-bottom: 1.5rem;
+                padding: 1rem;
+                page-break-inside: avoid;
+                animation: none;
+                opacity: 1;
+                transform: none;
+                background: white;
+            }
+            nav a {
+                display: none;
+            }
+            .details {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .detail-item {
+                animation: none;
+                opacity: 1;
+                transform: none;
+                border-left: 4px solid #ff416c;
+                background: white;
+                padding: 1rem;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+                color: #ff4b2b;
+                animation: none;
+            }
+            .section .url {
+                font-size: 1rem;
+                color: #3498db;
+                transform: none;
+            }
+            .detail-item h3 {
+                font-size: 1.2rem;
+            }
+            .detail-item p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-rocket fa-spin"></i> Website Analysis Report</h1>
+        <button class="download-btn" onclick="downloadPDF()"><i class="fas fa-download"></i> Download as PDF</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#pabbly">Pabbly</a></li>
+            <li><a href="#dotcomkings">DotComKings</a></li>
+            <li><a href="#askoptimo">AskOptimo</a></li>
+            <li><a href="#leadenforce">Leadenforce</a></li>
+            <li><a href="#answerthepublic">AnswerThePublic</a></li>
+            <li><a href="#marketingexamples">MarketingExamples</a></li>
+            <li><a href="#contra">Contra</a></li>
+            <li><a href="#weworkremotely">We Work Remotely</a></li>
+            <li><a href="#peopleperhour">PeoplePerHour</a></li>
+            <li><a href="#abcinvoice">ABCInvoice</a></li>
+            <li><a href="#rocketreach">RocketReach</a></li>
+            <li><a href="#googletrends">Google Trends</a></li>
+            <li><a href="#neilpatel">Neil Patel</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="pabbly" class="section">
+            <h2><i class="fas fa-cogs"></i> Pabbly</h2>
+            <p class="url"><a href="https://pabbly.com" target="_blank">https://pabbly.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>All-in-one suite for marketing automation: emails, forms, billing.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Tools include Pabbly Connect for automating workflows, email marketing, billing subscriptions, and building forms.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Based on subscriptions with bundle options available.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Covers many tools; some bugs and slow support reported.</p>
+                </div>
+            </div>
+        </section>
+        <section id="dotcomkings" class="section">
+            <h2><i class="fas fa-dollar-sign"></i> DotComKings</h2>
+            <p class="url"><a href="https://dotcomkings.com" target="_blank">https://dotcomkings.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Shares resources for earning money online.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Collects affiliate links, guides, and tips for side hustles.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Mainly through affiliates and advertisements.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Low visitors; scam flags—check platforms first.</p>
+                </div>
+            </div>
+        </section>
+        <section id="askoptimo" class="section">
+            <h2><i class="fas fa-robot"></i> AskOptimo</h2>
+            <p class="url"><a href="https://askoptimo.com" target="_blank">https://askoptimo.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>AI tools to boost marketing, SEO, and productivity creativity.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>AI suite like caption generators for Instagram (up to 3000 chars), quicker than manual.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Likely freemium or subscription-based.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Over 1M uses, 2.5k+ users; by FATJOE.</p>
+                </div>
+            </div>
+        </section>
+        <section id="leadenforce" class="section">
+            <h2><i class="fas fa-target"></i> Leadenforce</h2>
+            <p class="url"><a href="https://leadenforce.com" target="_blank">https://leadenforce.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Tool for advanced Facebook audience targeting.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Targets via job titles, companies, phones, emails, social; builds retargeting lists.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Subscriptions (1-12 months, up to 40% off).</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Saves time on research; limited reviews.</p>
+                </div>
+            </div>
+        </section>
+        <section id="answerthepublic" class="section">
+            <h2><i class="fas fa-search"></i> AnswerThePublic</h2>
+            <p class="url"><a href="https://answerthepublic.com" target="_blank">https://answerthepublic.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Research SEO and content ideas from search data.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Input keywords for visual real-time query insights.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Freemium model; pay for extra usage/insights.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Great user experience; free queries limited.</p>
+                </div>
+            </div>
+        </section>
+        <section id="marketingexamples" class="section">
+            <h2><i class="fas fa-lightbulb"></i> MarketingExamples</h2>
+            <p class="url"><a href="https://marketingexamples.com" target="_blank">https://marketingexamples.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Learn marketing via real examples.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Short visual studies of campaigns with explanations.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Courses, memberships, sponsored newsletters.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Clean design, well-regarded in marketing.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contra" class="section">
+            <h2><i class="fas fa-users"></i> Contra</h2>
+            <p class="url"><a href="https://contra.com" target="_blank">https://contra.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Portfolio-focused freelance hiring platform.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Freelancers display work; clients hire directly, no bids.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Commissions or premium charges.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Creator-oriented, sleek design unlike Upwork.</p>
+                </div>
+            </div>
+        </section>
+        <section id="weworkremotely" class="section">
+            <h2><i class="fas fa-home"></i> We Work Remotely</h2>
+            <p class="url"><a href="https://weworkremotely.com" target="_blank">https://weworkremotely.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Board for remote job listings.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Employers list jobs; seekers browse categories.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Fees for job postings by employers.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>No bids, quality jobs, big community.</p>
+                </div>
+            </div>
+        </section>
+        <section id="peopleperhour" class="section">
+            <h2><i class="fas fa-clock"></i> PeoplePerHour</h2>
+            <p class="url"><a href="https://peopleperhour.com" target="_blank">https://peopleperhour.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Marketplace connecting freelancers and businesses.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Freelancers provide services or bid on posts.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Cuts from freelancer payments.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>UK-strong; very competitive market.</p>
+                </div>
+            </div>
+        </section>
+        <section id="abcinvoice" class="section">
+            <h2><i class="fas fa-file-invoice"></i> ABCInvoice</h2>
+            <p class="url"><a href="https://abcinvoice.com" target="_blank">https://abcinvoice.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Likely free invoicing tool, but site seems inactive.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Details not available; content lacking.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Unknown.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Possibly defunct; verify before use.</p>
+                </div>
+            </div>
+        </section>
+        <section id="rocketreach" class="section">
+            <h2><i class="fas fa-rocket"></i> RocketReach</h2>
+            <p class="url"><a href="https://rocketreach.co" target="_blank">https://rocketreach.co</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Tool for generating leads and finding contacts.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Search for names/domains to retrieve emails/phones.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Credit plans (freemium); enterprise options.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Used in sales/recruiting; accuracy can vary.</p>
+                </div>
+            </div>
+        </section>
+        <section id="googletrends" class="section">
+            <h2><i class="fas fa-chart-bar"></i> Google Trends</h2>
+            <p class="url"><a href="https://trends.google.com" target="_blank">https://trends.google.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Track keyword search trends over time.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Input terms for time/region interest data.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Free from Google; aids ads/SEO.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>Reliable for trends.</p>
+                </div>
+            </div>
+        </section>
+        <section id="neilpatel" class="section">
+            <h2><i class="fas fa-user-tie"></i> Neil Patel</h2>
+            <p class="url"><a href="https://neilpatel.com" target="_blank">https://neilpatel.com</a></p>
+            <div class="details">
+                <div class="detail-item">
+                    <h3><i class="fas fa-bullseye"></i> Purpose</h3>
+                    <p>Blog, tools, and consulting for digital marketing/SEO.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-play-circle"></i> How it Works</h3>
+                    <p>Free articles, paid tools like Ubersuggest, services.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-dollar-sign"></i> Monetization</h3>
+                    <p>Via tools, courses, consulting.</p>
+                </div>
+                <div class="detail-item">
+                    <h3><i class="fas fa-star"></i> Features/Warnings</h3>
+                    <p>SEO expert; paid for full tool access.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <button class="download-btn" onclick="downloadPDF()"><i class="fas fa-download"></i> Download Report as PDF</button>
+    </footer>
+    <script>
+        // Scroll spy for active nav
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav a');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 250) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Download PDF functionality
+        function downloadPDF() {
+            // Temporarily disable animations to ensure content is captured
+            document.querySelectorAll('.section, .detail-item').forEach(el => {
+                el.style.animation = 'none';
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+
+            const element = document.querySelector('main'); // Capture only main content for better PDF focus
+            const options = {
+                margin: [0.5, 0.5, 0.5, 0.5],
+                filename: 'Website_Analysis_Report.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { 
+                    scale: 2, 
+                    useCORS: true,
+                    windowWidth: document.documentElement.scrollWidth,
+                    scrollX: 0,
+                    scrollY: 0
+                },
+                jsPDF: { 
+                    unit: 'in', 
+                    format: 'letter', 
+                    orientation: 'portrait' 
+                }
+            };
+
+            // Generate and save PDF
+            html2pdf().set(options).from(element).toPdf().get('pdf').then(pdf => {
+                pdf.save();
+                // Restore animations after PDF generation
+                setTimeout(() => {
+                    location.reload(); // Reload to restore animations
+                }, 500);
+            });
+        }
+    </script>
+</body>
+</html>
